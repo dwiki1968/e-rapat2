@@ -73,7 +73,7 @@ const Navbar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems="center">
-            <LinkRouter to="dashboard">
+            <LinkRouter to="/">
               <Text
                 fontWeight="extrabold"
                 color="blue.400"

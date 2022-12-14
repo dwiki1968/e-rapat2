@@ -11,7 +11,7 @@ import { FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg="blackAlpha.100"
+      bg="blue.100"
       rounded={"full"}
       w={8}
       h={8}
