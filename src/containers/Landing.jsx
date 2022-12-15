@@ -1,12 +1,18 @@
 import {
+  Box,
+  Flex,
+  Heading,
   IconButton,
   Input,
   InputGroup,
   InputRightElement,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import CardRapatPublic from "../components/CardRapatPublic";
+import MeetingAnimation from "../components/MeetingAnimation";
+import Pagination from "../components/Pagination";
 
 const rapatlist = [
   {
@@ -43,8 +49,32 @@ const rapatlist = [
 
 const Landing = () => {
   return (
-    <div>
-      <iframe src="https://embed.lottiefiles.com/animation/5066"></iframe>
+    <>
+      <Flex
+        justifyContent="space-between"
+        flexDir={{ base: "column", md: "row" }}
+        alignItems="center"
+      >
+        <Flex flexDir="column">
+          <Heading
+            color="gray.600"
+            maxW="400px"
+            mb={2}
+            fontSize="5xl"
+            lineHeight={1}
+            fontWeight="bold"
+          >
+            e-rapat
+          </Heading>
+          <Text color="gray.500">
+            Aplikasi untuk membantu kegiatan rapat pada Pusat Pelaporan dan
+            Analisis Transaksi Keuangan
+          </Text>
+        </Flex>
+        <Box>
+          <MeetingAnimation />
+        </Box>
+      </Flex>
       <InputGroup maxW="500px">
         <Input
           bg="white"
@@ -59,7 +89,9 @@ const Landing = () => {
       {rapatlist.map((rapat) => (
         <CardRapatPublic key={rapat.id} data={rapat} />
       ))}
-    </div>
+
+      <Pagination />
+    </>
   );
 };
 

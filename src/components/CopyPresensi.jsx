@@ -10,7 +10,8 @@ export default function CopyPresensi() {
     <>
       <Flex mb={2}>
         <Textarea
-          h="175px"
+          fontSize="sm"
+          h="150px"
           bg="white"
           placeholder={placeholder}
           value={value}

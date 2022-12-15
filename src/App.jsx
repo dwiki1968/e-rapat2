@@ -6,6 +6,7 @@ import NotFound from "./containers/NotFound";
 import Settings from "./containers/Settings";
 import DetailRapat from "./containers/DetailRapat";
 import Landing from "./containers/Landing";
+import FormPresensi from "./containers/FormPresensi";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/rapat/:rapatId" element={<DetailRapat />} />
           <Route path="login" element={<Login />} />
           <Route path="dashboard" element={<Home />} />
+          <Route path="/hadir/:presensiId" element={<FormPresensi />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

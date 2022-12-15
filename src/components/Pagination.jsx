@@ -21,14 +21,14 @@ const Pagination = () => {
 
 const PaginationButton = ({ children, isDisabled, isActive, ...props }) => {
   const activeStyle = {
-    bg: useColorModeValue("gray.300", "gray.700"),
+    bg: useColorModeValue("blue.200", "blue.700"),
   };
 
   return (
     <Flex
-      p={3}
-      px={4}
-      fontSize="md"
+      p={2}
+      px={3}
+      fontSize="sm"
       fontWeight="500"
       lineHeight={0.8}
       opacity={isDisabled && 0.7}
