@@ -39,10 +39,12 @@ const CardRapatPublic = ({ data }) => {
         </Flex>
       </Flex>
       <Flex gap={2}>
-        <Button size="xs" leftIcon={<FiEdit3 />}>
-          {" "}
-          Isi Presensi
-        </Button>
+        <Link to="/hadir/dfasd">
+          <Button size="sm" bg="blue.200" leftIcon={<FiEdit3 />}>
+            {" "}
+            Isi Presensi
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );

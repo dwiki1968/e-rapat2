@@ -14,9 +14,27 @@ import {
   Stack,
   Textarea,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 const AddRapatSidebar = ({ isOpen, firstField, onClose }) => {
+  const [nama, setNama] = useState("");
+  const [waktu, setWaktu] = useState("");
+  const [tempat, setTempat] = useState("");
+  const [unitkerja, setUnitkerja] = useState("");
+  const [keterangan, setKeterangan] = useState("");
+
+  const handleSubmit = () => {
+    const data = {
+      nama,
+      waktu,
+      tempat,
+      unitkerja,
+      keterangan,
+    };
+
+    console.log("data post", data);
+  };
+
   return (
     <>
       <Drawer
@@ -38,22 +56,39 @@ const AddRapatSidebar = ({ isOpen, firstField, onClose }) => {
                   ref={firstField}
                   id="nama"
                   placeholder="Nama rapat anda"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
                 />
               </Box>
 
               <Box>
                 <FormLabel htmlFor="waktu">Waktu</FormLabel>
-                <Input id="waktu" type="datetime-local" />
+                <Input
+                  id="waktu"
+                  type="datetime-local"
+                  value={waktu}
+                  onChange={(e) => setWaktu(e.target.value)}
+                />
               </Box>
 
               <Box>
                 <FormLabel htmlFor="nama">Tempat</FormLabel>
-                <Input id="tempat" placeholder="contoh R. Rapat Lt 5" />
+                <Input
+                  id="tempat"
+                  placeholder="contoh R. Rapat Lt 5"
+                  value={tempat}
+                  onChange={(e) => setTempat(e.target.value)}
+                />
               </Box>
 
               <Box>
                 <FormLabel htmlFor="unit">Pilih Unit Kerja</FormLabel>
-                <Select id="unit" defaultValue="PTI">
+                <Select
+                  id="unit"
+                  defaultValue="PTI"
+                  value={unitkerja}
+                  onChange={(e) => setUnitkerja(e.target.value)}
+                >
                   <option value="segun">Segun Adebayo</option>
                   <option value="kola">Kola Tioluwani</option>
                 </Select>
@@ -61,7 +96,11 @@ const AddRapatSidebar = ({ isOpen, firstField, onClose }) => {
 
               <Box>
                 <FormLabel htmlFor="desc">Keterangan</FormLabel>
-                <Textarea id="desc" />
+                <Textarea
+                  id="desc"
+                  value={keterangan}
+                  onChange={(e) => setKeterangan(e.target.value)}
+                />
               </Box>
             </Stack>
           </DrawerBody>
@@ -70,7 +109,9 @@ const AddRapatSidebar = ({ isOpen, firstField, onClose }) => {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue">Submit</Button>
+            <Button colorScheme="blue" onClick={handleSubmit}>
+              Submit
+            </Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

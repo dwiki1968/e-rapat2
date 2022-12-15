@@ -79,7 +79,7 @@ const Navbar = () => {
                 color="blue.400"
                 _hover={{ color: "blue.500" }}
               >
-                📅 E-RAPAT
+                📅 e-rapat
               </Text>
             </LinkRouter>
             <HStack

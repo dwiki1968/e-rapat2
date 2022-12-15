@@ -72,22 +72,20 @@ const RekapPresensiTable = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {rekapPresensi.map((data) => (
-                <>
-                  <Tr key={data.rekapId}>
-                    <Td>{data.nama}</Td>
-                    <Td>{data.unit}</Td>
-                    <Td>{data.tandaTangan}</Td>
-                    <Td>{data.waktu}</Td>
-                    <Td>
-                      <IconButton
-                        icon={<FiTrash />}
-                        variant="link"
-                        colorScheme={"red"}
-                      />
-                    </Td>
-                  </Tr>
-                </>
+              {rekapPresensi.map((data, index) => (
+                <Tr key={index}>
+                  <Td>{data.nama}</Td>
+                  <Td>{data.unit}</Td>
+                  <Td>{data.tandaTangan}</Td>
+                  <Td>{data.waktu}</Td>
+                  <Td>
+                    <IconButton
+                      icon={<FiTrash />}
+                      variant="link"
+                      colorScheme={"red"}
+                    />
+                  </Td>
+                </Tr>
               ))}
             </Tbody>
           </Table>

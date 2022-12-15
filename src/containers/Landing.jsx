@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Flex,
   Heading,
   IconButton,
@@ -9,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { FiSearch } from "react-icons/fi";
+import { FiDownloadCloud, FiSearch } from "react-icons/fi";
 import CardRapatPublic from "../components/CardRapatPublic";
 import MeetingAnimation from "../components/MeetingAnimation";
 import Pagination from "../components/Pagination";
@@ -51,15 +52,14 @@ const Landing = () => {
   return (
     <>
       <Flex
-        justifyContent="space-between"
+        justifyContent={{ base: "center", md: "space-between" }}
         flexDir={{ base: "column", md: "row" }}
         alignItems="center"
       >
-        <Flex flexDir="column">
+        <Flex flexDir="column" gap={5}>
           <Heading
             color="gray.600"
             maxW="400px"
-            mb={2}
             fontSize="5xl"
             lineHeight={1}
             fontWeight="bold"
@@ -70,6 +70,16 @@ const Landing = () => {
             Aplikasi untuk membantu kegiatan rapat pada Pusat Pelaporan dan
             Analisis Transaksi Keuangan
           </Text>
+          <Flex gap={5}>
+            <Button bg="blue.200">Daftar</Button>
+            <Button
+              colorScheme="blue"
+              variant="outline"
+              rightIcon={<FiDownloadCloud />}
+            >
+              Juknis
+            </Button>
+          </Flex>
         </Flex>
         <Box>
           <MeetingAnimation />

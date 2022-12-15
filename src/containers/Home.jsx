@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Flex,
+  Heading,
   IconButton,
   Input,
   InputGroup,
@@ -9,7 +10,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { FiArrowLeft, FiArrowRight, FiPlus, FiSearch } from "react-icons/fi";
+import { FiPlus, FiSearch } from "react-icons/fi";
 import AddRapatSidebar from "../components/AddRapatSidebar";
 import CardRapat from "../components/CardRapat";
 import Pagination from "../components/Pagination";
@@ -53,6 +54,7 @@ const Home = () => {
 
   return (
     <>
+      <Heading mb={5}>Dashboard</Heading>
       <AddRapatSidebar
         isOpen={isOpen}
         firstField={firstField}
