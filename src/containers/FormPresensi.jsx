@@ -20,7 +20,7 @@ const FormPresensi = () => {
   const sigCanvas = useRef();
 
   const [nama, setNama] = useState("");
-  const [isPegawai, setIsPegawai] = useState("");
+  const [isPegawai, setIsPegawai] = useState("1");
   const [unitKerja, setUnitKerja] = useState("");
   const [signature, setSignature] = useState("");
 
@@ -90,6 +90,7 @@ const FormPresensi = () => {
             <Input
               type="text"
               value={unitKerja}
+              placeholder="Kementerian ... / PT..."
               onChange={(e) => setUnitKerja(e.target.value)}
             />
           )}

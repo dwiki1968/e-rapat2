@@ -8,7 +8,7 @@ export default function CopyPresensi() {
 
   return (
     <>
-      <Flex mb={2}>
+      <Flex mb={2} position="relative">
         <Textarea
           fontSize="sm"
           h="150px"
@@ -20,7 +20,15 @@ export default function CopyPresensi() {
           }}
           mr={2}
         />
-        <Button onClick={onCopy}>{hasCopied ? "Copied!" : "Copy"}</Button>
+        <Button
+          size="sm"
+          position="absolute"
+          top={5}
+          right={5}
+          onClick={onCopy}
+        >
+          {hasCopied ? "Copied!" : "Copy"}
+        </Button>
       </Flex>
     </>
   );

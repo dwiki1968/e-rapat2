@@ -21,30 +21,35 @@ const rapatlist = [
     nama: "Rapat Pelaksanaan Anggaran Pusat TI 2022",
     waktu: "11/12/2022 08.00 wib",
     tempat: "Ruang Rapat Lt.5",
+    unit: "Pusat Teknologi Informasi",
   },
   {
     id: 2,
     nama: "Lorem in ut consequat velit enim dolore ea exercitation quis sunt.",
     waktu: "11/12/2022 13.00 wib",
     tempat: "zoom",
+    unit: "Pusat Teknologi Informasi",
   },
   {
     id: 3,
     nama: "Laboris anim minim minim nostrud pariatur incididunt anim voluptate ipsum aliquip ut ullamco.",
     waktu: "6/12/2022 08.00 wib",
     tempat: "Ruang Rapat Lt.5",
+    unit: "Pusat Teknologi Informasi",
   },
   {
     id: 4,
     nama: "Aute non sint non cupidatat ipsum nostrud veniam est esse minim proident non nisi.",
     waktu: "11/10/2022 07.00 wib",
     tempat: "Ruang Rapat Lt.5",
+    unit: "Pusat Teknologi Informasi",
   },
   {
     id: 5,
     nama: "Sunt consequat mollit enim quis do fugiat minim occaecat aute sit ex amet.",
     waktu: "10/12/2022 08.00 wib",
     tempat: "Ruang Rapat Lt.5",
+    unit: "Pusat Teknologi Informasi",
   },
 ];
 

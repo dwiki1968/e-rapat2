@@ -5,8 +5,13 @@ import settings from "../assets/settings.json";
 import { FiEdit3 } from "react-icons/fi";
 const Settings = () => {
   return (
-    <div>
-      <Flex flexDir={{ base: "column", md: "row" }} bg="white" p={10}>
+    <>
+      <Flex
+        flexDir={{ base: "column", md: "row" }}
+        bg="white"
+        p={10}
+        alignItems="center"
+      >
         <Box>
           <Heading mb={3}>Dwiki Krisna Saputra</Heading>
           <Text>Pusat Teknologi Informasi</Text>
@@ -20,7 +25,7 @@ const Settings = () => {
         </Box>
         <Animation width={300} data={settings} />
       </Flex>
-    </div>
+    </>
   );
 };
 

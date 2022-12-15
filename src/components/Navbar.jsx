@@ -26,7 +26,7 @@ import { MdTimeline } from "react-icons/md";
 import { Link as LinkRouter } from "react-router-dom";
 
 const navLinks = [
-  // { name: "Rapat", path: "/" },
+  { name: "Dashboard", path: "/dashboard" },
   { name: "Settings", path: "/settings" },
 ];
 
@@ -57,7 +57,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box px={4} boxShadow="md" width="100%" bg="white">
+    <Box px={4} boxShadow="sm" width="100%" bg="white">
       <Container maxW={"5xl"}>
         <Flex
           h={16}

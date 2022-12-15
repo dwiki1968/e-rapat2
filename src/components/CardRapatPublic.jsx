@@ -36,6 +36,9 @@ const CardRapatPublic = ({ data }) => {
           <Tag bg="blue.50" size="sm">
             {data.tempat}
           </Tag>
+          <Tag bg="blue.50" size="sm">
+            {data.unit}
+          </Tag>
         </Flex>
       </Flex>
       <Flex gap={2}>

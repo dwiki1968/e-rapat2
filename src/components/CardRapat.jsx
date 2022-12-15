@@ -41,7 +41,9 @@ const CardRapat = ({ data }) => {
       <Flex gap={2}>
         <IconButton color="blue.500" variant="link" icon={<FiEdit />} />
         <IconButton color="red.500" variant="link" icon={<FiTrash />} />
-        <Button size="xs"> Rekap Presensi</Button>
+        <Link to="/rapat/dfasd">
+          <Button size="xs"> Rekap Presensi</Button>
+        </Link>
       </Flex>
     </Flex>
   );

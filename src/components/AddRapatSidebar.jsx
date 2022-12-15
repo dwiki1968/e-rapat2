@@ -85,7 +85,6 @@ const AddRapatSidebar = ({ isOpen, firstField, onClose }) => {
                 <FormLabel htmlFor="unit">Pilih Unit Kerja</FormLabel>
                 <Select
                   id="unit"
-                  defaultValue="PTI"
                   value={unitkerja}
                   onChange={(e) => setUnitkerja(e.target.value)}
                 >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import {
   Box,
@@ -13,6 +13,8 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { FiPrinter, FiTrash } from "react-icons/fi";
+import { useReactToPrint } from "react-to-print";
+import PrintRekap from "./PrintRekap";
 
 const rekapPresensi = [
   {
@@ -53,10 +55,20 @@ const rekapPresensi = [
 ];
 
 const RekapPresensiTable = () => {
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <>
+      <Box display="none">
+        <Box ref={componentRef}>
+          <PrintRekap />
+        </Box>
+      </Box>
       <Box bg="white" mt={5} p={5}>
-        <Button leftIcon={<FiPrinter />} mb={5}>
+        <Button leftIcon={<FiPrinter />} mb={5} onClick={handlePrint}>
           Cetak
         </Button>
         <TableContainer>
